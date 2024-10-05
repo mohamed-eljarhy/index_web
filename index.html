@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ClimaScope</title>
+</head>
+
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ClimaScope - Visualizing Climate Change</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    body, html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    
+    }
+    .bgimg {
+      background-position: center;
+      
+      background-size: cover;
+      background-image: url("https://example.com/climate-change.jpg");
+      min-height: 75%;
+      
+    }
+    .menu {
+      display: none;
+      
+    }
+    header {
+    background-image: url("20241005_001851.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#stories" class="w3-button w3-block w3-black">STORIES</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#data-explorer" class="w3-button w3-block w3-black">DATA EXPLORER</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with Climate-related Image -->
+  <header class="bgimg w3-display-container w3-grayscale-min"  >
+  <div class="w3-display-middle w3-center ">
+    <!-- <span  class="w3-text-black" style="font-size:90px">ClimaScope<br>Data and Stories</span> -->
+  </div>
+</header>
+<video autoplay muted loop id="header-video">
+  <source src="C:\Users\abdo\OneDrive\Desktop\Climate change app\climate change.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<!-- Main Content -->
+<div class="w3-sand w3-grayscale w3-large">
+
+  <!-- About Section -->
+  <div class="w3-container" id="about">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT ClimaScope</span></h5>
+      <p>ClimaScope is an open-source platform dedicated to visualizing and telling the story of climate change using public data. Our goal is to make climate data accessible and understandable for everyone, driving informed decisions and actions toward addressing climate change.</p>
+      <img src="C:\Users\abdo\OneDrive\Desktop\Climate change app\20241005_001851.jpg" style="width:30%;max-width:1000px" class="w3-margin-top">
+      <p><strong>Our Data:</strong> We use open-source data from the U.S. Greenhouse Gas Center, NOAA, and other reputable climate organizations.</p>
+    </div>
+  </div>
+
+  <!-- Data Explorer Section -->
+  <div class="w3-container" id="data-explorer">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">EXPLORE CLIMATE DATA</span></h5>
+      <p>Use our interactive tools to explore climate trends, greenhouse gas emissions, and temperature anomalies across regions.</p>
+      
+      <div class="w3-row w3-center w3-card w3-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'CO2');" id="myLink">
+          <div class="w3-col s6 tablink">CO2 Emissions</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Temperature');">
+          <div class="w3-col s6 tablink">Temperature Changes</div>
+        </a>
+      </div>
+
+      <!-- Placeholder for Data Visualizations -->
+      <div id="CO2" class="w3-container menu w3-padding-48 w3-card">
+        <h5>CO2 Emissions Over Time</h5>
+        <p class="w3-text-grey">Explore the rise in CO2 emissions from various regions globally.</p><br>
+
+      <img src="C:\Users\abdo\OneDrive\Desktop\Climate change app\annual-co-emissions-by-region.svg" alt="Error" width="500px">
+        <!-- You can embed data visualizations here using Chart.js -->
+      </div>
+
+      <div id="Temperature" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Temperature Anomalies</h5>
+        <p class="w3-text-grey">Visualize how global temperatures have changed over time due to greenhouse gas emissions.</p><br>
+        <img src="C:\Users\abdo\OneDrive\Desktop\Climate change app\1_PEz2rFdsaF_vHkM5JHgSBw.jpg" alt="Error" width="500px">
+        <!-- You can embed a temperature anomaly graph here using a data visualization tool -->
+      </div>  
+
+      <!-- <span>Emissions, particularly greenhouse gas (GHG) emissions, can be classified based on various criteria such as source, gas type, sector, and geographic scope. Here's a classification of emissions:
+<br>
+        1. Classification by Source: <br>
+           a. Natural Emissions:  
+           These occur through natural processes and cycles without human intervention. <br>
+           - Volcanic Activity: Emits CO2, SO2, and particulates. <br>
+           - Forest Fires: Release carbon stored in vegetation, contributing to CO2 emissions. <br>
+           - Oceanic Emissions: The oceans release CO2 into the atmosphere naturally. <br>
+           - Biological Processes: Decomposition of organic material releases methane (CH4) and CO2. <br>
+<br>      
+           b. Anthropogenic (Human-caused) Emissions: 
+           These are emissions caused by human activities.
+           <br> - Fossil Fuel Combustion: Burning coal, oil, and natural gas for energy and transportation.
+           <br> - Industrial Processes: Chemical reactions in manufacturing, such as cement production and steelmaking.
+           <br> - Agriculture: Livestock (methane from enteric fermentation), rice paddies, and soil management (nitrous oxide).
+           <br> - Waste Management: Landfills produce methane, and wastewater treatment releases CH4 and N2O.
+ <br>       
+ <br>  2. Classification by Gas Type:
+        <br> a. Carbon Dioxide (CO2):  
+           The most common greenhouse gas, primarily from burning fossil fuels, deforestation, and land-use changes.
+           <br>- Sources include power plants, vehicles, industrial processes, and deforestation.
+        
+           <br>  b. Methane (CH4):  
+           More potent than CO2 but present in smaller quantities, with a significant short-term impact on warming.
+           <br>  - Sources include livestock, landfills, rice cultivation, and oil and gas extraction.
+        
+           <br>  c. Nitrous Oxide (N2O):  
+           A highly potent GHG, commonly emitted from agriculture and industrial processes.
+           <br> - Sources include fertilizer application, fossil fuel combustion, and wastewater management.
+        
+           <br>  d. Fluorinated Gases:  
+           Synthetic gases used in industrial applications, including HFCs, PFCs, and SF6.
+           <br>  - Sources include refrigeration, air conditioning, insulation, and electronics production.
+        
+           <br>  e. Water Vapor (H2O):  
+           Not directly emitted by human activities but is a significant component of the Earth's greenhouse effect.
+           <br>  - It is amplified by warming and evaporation but not directly influenced by human activities.
+        
+           <br> 3. Classification by Economic Sector:
+        <br> a. Energy Sector:  
+           The largest source of global GHG emissions, primarily from burning fossil fuels.
+           <br>  - Power Plants: Emit CO2 from burning coal, natural gas, and oil for electricity and heat.
+           <br> - Transportation: Cars, trucks, airplanes, and ships emit CO2 from fossil fuels.
+        
+           <br> b. Industrial Sector:  
+           Emissions from chemical processes, manufacturing, and the use of high-energy inputs.
+           <br> - Cement Production: Releases CO2 during the calcination process.
+           <br> - Steel and Aluminum Production: Involves high-temperature chemical reactions that emit CO2 and fluorinated gases.
+        
+           <br> c. Agriculture, Forestry, and Land Use (AFOLU):  
+           Significant contributor of CH4, N2O, and CO2 through farming, deforestation, and soil management.
+           <br>  - Livestock Emissions: Methane from digestion (enteric fermentation) in ruminants like cows.
+           <br> - Deforestation: Releases stored carbon in trees and soil when forests are cleared.
+        
+           <br> d. Waste Management:  
+           Emissions from solid waste disposal and wastewater treatment.
+           <br> - Landfills produce methane as organic waste decomposes anaerobically.
+           <br> - Wastewater releases methane and nitrous oxide from sewage and industrial wastewater treatment.
+        
+           <br>  4. Classification by Geographic Scope:
+        <br> a. Global Emissions:  
+           Greenhouse gases emitted worldwide, contributing to global climate change.
+           <br>  - Top Contributors: Countries like China, the U.S., India, and the EU account for a significant portion of global emissions.
+        
+           <br> b. National Emissions:  
+           Each country's emission profile is determined by industrial activity, energy sources, and land use.
+           <br>  - Developed Countries: Often emit more CO2 per capita due to higher industrialization and energy use.
+           <br>  - Developing Countries: May have lower per capita emissions but significant contributions from agriculture or deforestation.
+        
+           <br> c. Local/Regional Emissions:  
+           Emissions specific to regions, cities, or municipalities.
+           <br>  - Urban Areas: High emissions from transportation and industrial sectors.
+           <br>  - Rural Areas: Agricultural emissions from livestock and crop management.
+        
+           <br> 5. Classification by Emission Scope (GHG Protocol):
+           The GHG Protocol defines three scopes for categorizing direct and indirect emissions, particularly for companies and organizations.
+        
+           <br> a. Scope 1 (Direct Emissions):  
+           Emissions from sources directly controlled by the company, such as fuel combustion in company vehicles or facilities.
+        
+           <br> b. Scope 2 (Indirect Emissions from Energy Use):  
+           Emissions from the generation of purchased electricity, steam, heating, or cooling used by the organization.
+        
+           <br> c. Scope 3 (Other Indirect Emissions):  
+           Emissions from sources not owned or directly controlled by the company but related to its activities, such as the supply chain, business travel, and waste disposal.</span> -->
+           <p>Emissions, particularly greenhouse gas (GHG) emissions, can be classified based on various criteria such as source, gas type, sector, and geographic scope. Here's a classification of emissions:</p>
+
+           <h3>1. Classification by Source:</h3>
+           <p><strong>a. Natural Emissions:</strong> <br>
+           These occur through natural processes and cycles without human intervention.</p>
+           <ul>
+               <li>Volcanic Activity: Emits CO2, SO2, and particulates.</li>
+               <li>Forest Fires: Release carbon stored in vegetation, contributing to CO2 emissions.</li>
+               <li>Oceanic Emissions: The oceans release CO2 into the atmosphere naturally.</li>
+               <li>Biological Processes: Decomposition of organic material releases methane (CH4) and CO2.</li>
+           </ul>
+       
+           <p><strong>b. Anthropogenic (Human-caused) Emissions:</strong> <br>
+           These are emissions caused by human activities.</p>
+           <ul>
+               <li>Fossil Fuel Combustion: Burning coal, oil, and natural gas for energy and transportation.</li>
+               <li>Industrial Processes: Chemical reactions in manufacturing, such as cement production and steelmaking.</li>
+               <li>Agriculture: Livestock (methane from enteric fermentation), rice paddies, and soil management (nitrous oxide).</li>
+               <li>Waste Management: Landfills produce methane, and wastewater treatment releases CH4 and N2O.</li>
+           </ul>
+       
+           <h3>2. Classification by Gas Type:</h3>
+           <p><strong>a. Carbon Dioxide (CO2):</strong> <br>
+           The most common greenhouse gas, primarily from burning fossil fuels, deforestation, and land-use changes.</p>
+           <ul>
+               <li>Sources include power plants, vehicles, industrial processes, and deforestation.</li>
+           </ul>
+       
+           <p><strong>b. Methane (CH4):</strong> <br>
+           More potent than CO2 but present in smaller quantities, with a significant short-term impact on warming.</p>
+           <ul>
+               <li>Sources include livestock, landfills, rice cultivation, and oil and gas extraction.</li>
+           </ul>
+       
+           <p><strong>c. Nitrous Oxide (N2O):</strong> <br>
+           A highly potent GHG, commonly emitted from agriculture and industrial processes.</p>
+           <ul>
+               <li>Sources include fertilizer application, fossil fuel combustion, and wastewater management.</li>
+           </ul>
+       
+           <p><strong>d. Fluorinated Gases:</strong> <br>
+           Synthetic gases used in industrial applications, including HFCs, PFCs, and SF6.</p>
+           <ul>
+               <li>Sources include refrigeration, air conditioning, insulation, and electronics production.</li>
+           </ul>
+       
+           <p><strong>e. Water Vapor (H2O):</strong> <br>
+           Not directly emitted by human activities but is a significant component of the Earth's greenhouse effect.</p>
+           <ul>
+               <li>It is amplified by warming and evaporation but not directly influenced by human activities.</li>
+           </ul>
+       
+           <h3>3. Classification by Economic Sector:</h3>
+           <p><strong>a. Energy Sector:</strong> <br>
+           The largest source of global GHG emissions, primarily from burning fossil fuels.</p>
+           <ul>
+               <li>Power Plants: Emit CO2 from burning coal, natural gas, and oil for electricity and heat.</li>
+               <li>Transportation: Cars, trucks, airplanes, and ships emit CO2 from fossil fuels.</li>
+           </ul>
+       
+           <p><strong>b. Industrial Sector:</strong> <br>
+           Emissions from chemical processes, manufacturing, and the use of high-energy inputs.</p>
+           <ul>
+               <li>Cement Production: Releases CO2 during the calcination process.</li>
+               <li>Steel and Aluminum Production: Involves high-temperature chemical reactions that emit CO2 and fluorinated gases.</li>
+           </ul>
+       
+           <p><strong>c. Agriculture, Forestry, and Land Use (AFOLU):</strong> <br>
+           Significant contributor of CH4, N2O, and CO2 through farming, deforestation, and soil management.</p>
+           <ul>
+               <li>Livestock Emissions: Methane from digestion (enteric fermentation) in ruminants like cows.</li>
+               <li>Deforestation: Releases stored carbon in trees and soil when forests are cleared.</li>
+           </ul>
+       
+           <p><strong>d. Waste Management:</strong> <br>
+           Emissions from solid waste disposal and wastewater treatment.</p>
+           <ul>
+               <li>Landfills produce methane as organic waste decomposes anaerobically.</li>
+               <li>Wastewater releases methane and nitrous oxide from sewage and industrial wastewater treatment.</li>
+           </ul>
+       
+           <h3>4. Classification by Geographic Scope:</h3>
+           <p><strong>a. Global Emissions:</strong> <br>
+           Greenhouse gases emitted worldwide, contributing to global climate change.</p>
+           <ul>
+               <li>Top Contributors: Countries like China, the U.S., India, and the EU account for a significant portion of global emissions.</li>
+           </ul>
+       
+           <p><strong>b. National Emissions:</strong> <br>
+           Each country's emission profile is determined by industrial activity, energy sources, and land use.</p>
+           <ul>
+               <li>Developed Countries: Often emit more CO2 per capita due to higher industrialization and energy use.</li>
+               <li>Developing Countries: May have lower per capita emissions but significant contributions from agriculture or deforestation.</li>
+           </ul>
+       
+           <p><strong>c. Local/Regional Emissions:</strong> <br>
+           Emissions specific to regions, cities, or municipalities.</p>
+           <ul>
+               <li>Urban Areas: High emissions from transportation and industrial sectors.</li>
+               <li>Rural Areas: Agricultural emissions from livestock and crop management.</li>
+           </ul>
+       
+           <h3>5. Classification by Emission Scope (GHG Protocol):</h3>
+           <p>The GHG Protocol defines three scopes for categorizing direct and indirect emissions, particularly for companies and organizations.</p>
+           <ul>
+               <li><strong>Scope 1 (Direct Emissions):</strong> Emissions from sources directly controlled by the company, such as fuel combustion in company vehicles or facilities.</li>
+               <li><strong>Scope 2 (Indirect Emissions from Energy Use):</strong> Emissions from the generation of purchased electricity, steam, heating, or cooling used by the organization.</li>
+               <li><strong>Scope 3 (Other Indirect Emissions):</strong> Emissions from sources not owned or directly controlled by the company but related to its activities, such as the supply chain, business travel, and waste disposal.</li>
+           </ul>
+       
+      <img src="C:\Users\abdo\OneDrive\Desktop\Climate change app\92377251-6548-4CE5-B4EF-CA36CC3BEF1B.JPEG.jpg" width="500px">
+    </div>
+  </div>
+
+  <!-- Climate Stories Section -->
+  <div class="w3-container" id="stories" style="padding-bottom:32px;">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CLIMATE STORIES</span></h5>
+      <p>Read compelling narratives about the effects of climate change, supported by data from our visualizations.</p>
+      <p><strong>Featured Story:</strong> "The Rise of CO2 Emissions and Its Impact on Global Temperatures"</p>
+      <p>The unchecked rise of carbon dioxide emissions, primarily due to human activities, is driving a global temperature surge. This warming trend, intensified by the greenhouse effect, is leading to severe consequences such as melting glaciers, rising sea levels, more extreme weather events, ocean acidification, and biodiversity loss. Addressing the climate crisis requires a global effort to reduce CO2 emissions and transition to cleaner energy sources. The future of our planet hangs in the balance, and decisive action is needed to mitigate the impacts of climate change and secure a sustainable future for generations to come.</p>
+      <img src="C:\Users\abdo\OneDrive\Desktop\Climate change app\The-corresponding-rise-in-CO2-and-global-temperatures-Source.png" alt="" width="690px" height="500px">
+      <p><strong>Latest Story:</strong> "The Role of Methane in Accelerating Global Warming"</p>
+      <p>Methane, a potent greenhouse gas, is contributing significantly to global warming. Its sources include agriculture, fossil fuel extraction, waste management, and natural sources like permafrost. Reducing methane emissions is crucial to combating climate change. Strategies to mitigate methane emissions include agricultural reforms, energy efficiency, renewable energy, and improved waste management. Addressing the methane challenge requires a multifaceted approach involving governments, industries, and individuals working together to reduce emissions and mitigate the impacts of climate change.
+      </p>
+      <img src="https://images.theconversation.com/files/542595/original/file-20230814-19-qrx4vh.png?ixlib=rb-4.1.0&q=45&auto=format&w=754&fit=clip" width="690px" height="500px>
+    </div>
+  </div>
+
+  <!-- Contact Form for Climate Story Inquiries -->
+  <div class="w3-container" style="padding-bottom:32px;">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT US</span></h5>
+      <p>Have questions or want to contribute a climate story? Send us a message:</p>
+      <form action="/submit_form" method="post">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
+        <p><textarea class="w3-input w3-padding-16 w3-border" placeholder="Message \ Special requirements" required name="Message"></textarea></p>
+        <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
+</body>
+
+</html>
